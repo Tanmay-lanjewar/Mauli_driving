@@ -1,0 +1,25 @@
+<div class="sidebar">
+    <h2>Admin Dashboard</h2>
+    <a href="/dashboard" class="sidebar-link"><i class="fas fa-home"></i> Information</a>
+    <a href="/teammember" class="sidebar-link"><i class="fas fa-user"></i> Team Members</a>
+    <a href="/admin/gallery" class="sidebar-link"><i class="fas fa-cog"></i> Gallery</a>
+    <a href="/admin/form" class="sidebar-link"><i class="fas fa-cog"></i> Forms</a>
+    <a id="sidebar_logout" style="width: 100%; background: rgba(255, 0, 0, 0.388); position: absolute; bottom: 10px;" href="/"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<script>
+    // Highlight the active link
+    document.querySelectorAll('.sidebar a').forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add('active');
+        }
+    });
+</script>
+
+<style>
+    /* Styling for active link */
+    .sidebar .active {
+        background-color: #ddd; /* Change as needed */
+        color: #333; /* Change as needed */
+    }
+</style>

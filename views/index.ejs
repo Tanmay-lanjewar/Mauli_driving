@@ -1,0 +1,1742 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Stylesheets -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!-- Responsive File -->
+    <link href="/css/responsive.css" rel="stylesheet">
+    <!-- Color File -->
+    <link href="/css/color.css" rel="stylesheet">
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="http://quranten.com//images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="http://quranten.com//images/favicon.png" type="image/x-icon">
+
+   
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  
+
+
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+
+
+     
+        <header class="main-header header-style-one">
+
+            
+            <div class="header-top">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <div class="left-column">
+                            <ul class="contact-info">
+                                <li><a href="tel:+919371271243"><i class="fal fa-paper-plane"></i>Krishan Nagar,
+                                        Wardha</a></li>
+                                <li><a href="mailto:contact@maulimotordrivingschool.in"><i
+                                            class="fal fa-envelope-open"></i>contact@maulimotordrivingschool.in</a></li>
+                                <li><i class="fal fa-clock"></i>Mon - Sat : 7:30am to 7:00pm</li>
+                            </ul>
+                        </div>
+                        <div class="right-column">
+                            <ul class="social-icon">
+                                <li><a href="http://localhost:3000/"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="http://localhost:3000/"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="http://localhost:3000/"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="http://localhost:3000/"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="http://localhost:3000/"><i class="fab fa-google-plus-g"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Header Upper -->
+            <div class="header-upper">
+                <div class="auto-container">
+                    <div class="inner-container">
+                        <!--Logo-->
+                        <div class="logo-box">
+                            <div class="logo">
+                                <a href="http://localhost:3000/"><img src="/images/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <!--Nav Box-->
+                            <div class="nav-outer">
+                                <!--Mobile Navigation Toggler-->
+                                <div class="mobile-nav-toggler"><img src="/images/icons/icon-bar.png" alt="">
+                                </div>
+
+                                <!-- Main Menu -->
+                                <nav class="main-menu navbar-expand-md navbar-light">
+                                    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                        <ul class="navigation">
+                                            <li class="dropdown"><a href="http://localhost:3000/">Home</a>
+
+                                            </li>
+                                            <li><a href="#about">About Us</a></li>
+                                            <li class="dropdown"><a href="http://localhost:3000/rto">RTO Services</a>
+                                                <!-- <ul>
+                                                    <li class="dropdown"><a href="http://localhost:3000/#">Our Courses</a>
+                                                         
+                                                    </li>
+                                                  <li><a href="highway-drive.html">Highway Driving Lesson</a></li> 
+                                                    <li><a href="complete-drive.html">Complete Driving Course</a></li>
+                                                    <li><a href="international-drive.html">For International Drivers</a>
+                                                    </li>
+                                                    <li><a href="pre-licens.html">Pre-Licensing Course</a></li>
+                                                    <li><a href="defensive-drive.html">Defensive Driving Course</a></li>
+                                                    <li><a href="road-test.html">Road Test Packages</a></li> 
+                                                    <li><a href="automatic-car-pack.html">Automatic Car Packages</a>
+                                                    </li>
+                                                </ul> -->
+                                            </li>
+                                            <li class="dropdown"><a href="#team">Team</a>
+
+                                            </li>
+                                            <li class="dropdown"><a href="#gallery">Gallery</a>
+                                                <!-- <ul>
+                                                    <li><a href="blog.html">Blog Grid </a></li>
+                                                    <li><a href="blog-2.html">Blog Classic </a></li>
+                                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                                </ul> -->
+                                            </li>
+                                            <li><a href="#contact">Contact</a></li>
+                                            <li><a onclick="editContent()"  class="btn btn-success" style="color: white; padding: 10px 20px; border-radius: 5px;">Login</a></li>
+                                        </ul>
+                                    </div>
+                                <!-- Login Popup -->
+                                <div id="login-popup" class="login-popup">
+                                    <div class="popup-content">
+                                        <span class="close-btn" onclick="closeLoginPopup()">&times;</span>
+                                        <h3>Admin Login</h3>
+                                        <form action="/admin/login" method="POST" onsubmit="return handleLogin(event)">
+                                            <h4 id="form_header" style="color: rgba(255, 0, 0, 0.717);"></h4>
+                                            <div class="form-group">
+                                                <label for="user-id">Admin ID</label>
+                                                <input type="text" id="user_id" name="user_id" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="password">Password</label>
+                                                <input type="password" id="password" name="password" required>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Login</button>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <script>
+                                    function handleLogin(event) {
+                                        event.preventDefault();
+                                        const userId = document.getElementById('user_id').value;
+                                        const password = document.getElementById('password').value;
+
+                                        fetch('/admin/login', {
+                                            method: 'POST',
+                                            headers: {
+                                                'Content-Type': 'application/json'
+                                            },
+                                            body: JSON.stringify({ user_id: userId, password: password })
+                                        })
+                                        .then(response => response.json())
+                                        .then(data => {
+
+                                            if (data.success) {
+                                                // Handle successful login
+                                                window.location.href = '/dashboard';
+                                            } else {
+                                                // Handle login failure
+                                                document.getElementById('form_header').innerText = 'User not exists';
+                                            }
+                                        })
+                                        .catch(error => {
+                                            console.error('Error:', error);
+                                        });
+                                    }
+                                </script>
+
+                                <style>
+                                    #user_id{
+                                        border: 1px solid black;
+                                    }
+                                    #password{
+                                        border: 1px solid black;
+                                    }
+                                    .login-popup {
+                                        display: none;
+                                        position: fixed;
+                                        z-index: 1000;
+                                        left: 0;
+                                        top: 0;
+                                        width: 100%;
+                                        height: 100%;
+                                        overflow: auto;
+                                        background-color: rgba(0, 0, 0, 0.5);
+                                    }
+
+                                    .popup-content {
+                                        background-color: #fff;
+                                        margin: 15% auto;
+                                        padding: 20px;
+                                        border: 1px solid #888;
+                                        width: 300px;
+                                        position: relative;
+                                    }
+
+                                    .close-btn {
+                                        position: absolute;
+                                        top: 10px;
+                                        right: 10px;
+                                        color: #aaa;
+                                        font-size: 28px;
+                                        font-weight: bold;
+                                        cursor: pointer;
+                                    }
+
+                                    .close-btn:hover,
+                                    .close-btn:focus {
+                                        color: #000;
+                                        text-decoration: none;
+                                        cursor: pointer;
+                                    }
+
+                                    .form-group {
+                                        margin-bottom: 15px;
+                                    }
+
+                                    .form-group label {
+                                        display: block;
+                                        margin-bottom: 5px;
+                                    }
+
+                                    .form-group input {
+                                        width: 100%;
+                                        padding: 8px;
+                                        box-sizing: border-box;
+                                    }
+
+                                    .btn-primary {
+                                        background-color: #007bff;
+                                        border: none;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        text-align: center;
+                                        text-decoration: none;
+                                        display: inline-block;
+                                        font-size: 16px;
+                                        margin: 4px 2px;
+                                        cursor: pointer;
+                                        border-radius: 5px;
+                                    }
+                                </style>
+
+                                <script>
+                                    function editContent() {
+                                        document.getElementById('login-popup').style.display = 'block';
+                                    }
+
+                                    function closeLoginPopup() {
+                                        document.getElementById('login-popup').style.display = 'none';
+                                    }
+                                </script>
+                            </div>
+                            <div class="navbar-right">
+
+                                <div class="contact-info">
+                                    <div class="icon"><span class="fas fa-phone-volume"></span></div>
+                                    <div class="content">
+                                        <h5>Learn To Drive? Call us</h5>
+                                        <h4><a href="tel:+919371271243">+91-9371271243</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+            <!-- Sticky Header  -->
+            <div class="sticky-header">
+                <div class="header-upper">
+                    <div class="auto-container">
+                        <div class="inner-container">
+                            <!--Logo-->
+                            <div style="z-index: 1;" class="logo-box">
+                                <div class="logo">
+                                    <a href="http://localhost:3000/"><img src="/images/logo.png" alt=""></a>
+                                </div>
+                            </div>
+                            <div class="right-column">
+                                <!--Nav Box-->
+                                <div class="nav-outer">
+                                    <!--Mobile Navigation Toggler-->
+                                    <div class="mobile-nav-toggler"><img src="/images/icons/icon-bar.png" alt="">
+                                    </div>
+
+                                    <!-- Main Menu -->
+                                    <nav class="main-menu navbar-expand-md navbar-light">
+                                    </nav>
+                                </div>
+                                <div class="navbar-right">
+
+                                    <div class="contact-info">
+                                        <div class="icon"><span class="fas fa-phone-volume"></span></div>
+                                        <div class="content">
+                                            <h5>Learn To Drive? Call us</h5>
+                                            <h4><a href="tel:+919371271243">+91-9371271243</a></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Sticky Menu -->
+
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+                <div class="menu-backdrop"></div>
+                <!-- <div class="close-btn"><span class="icon flaticon-remove"></span></div> -->
+                <div class="close-btn"><i class="fal fa-times"></i></div>
+
+                <nav class="menu-box">
+                    <div class="nav-logo">
+                        <a href="http://localhost:3000/"><img src="/images/logo-2.png" alt="" title=""></a>
+                    </div>
+                    <div class="menu-outer">
+                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                    </div>
+                    <!--Social Links-->
+                    <div class="social-links">
+                        <ul class="clearfix">
+                            <li><a href="http://localhost:3000/"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="http://localhost:3000/"><span class="fab fa-facebook-square"></span></a></li>
+                            <li><a href="http://localhost:3000/"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="http://localhost:3000/"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="http://localhost:3000/"><span class="fab fa-youtube"></span></a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- End Mobile Menu -->
+
+            <div class="nav-overlay">
+                <div class="cursor"></div>
+                <div class="cursor-follower"></div>
+            </div>
+        </header>
+        <!-- End Main Header -->
+
+        <!--Search Popup-->
+
+
+        <!-- Bnner Section -->
+        <section class="banner-section">
+            <div class="swiper-container banner-slider">
+                <div class="swiper-wrapper">
+                    <!-- Slide Item -->
+                    <div class="swiper-slide" style="background-image: url(/images/main-slider/image-1.jpg);">
+                        <div class="content-outer">
+                            <div class="content-box justify-content-center">
+                                <div class="inner text-center">
+                                    <h1>Helping You To Make <br> Yourself An Expert Driver</h1>
+                                    <div class="text">Helping You To Make <br> Yourself An Expert Driver
+                                    </div>
+                                    <div class="link-box">
+                                        <a href="http://localhost:3000/" class="theme-btn btn-style-one"><span>Get
+                                                Enrolled</span></a>
+                                        <a href="http://localhost:3000/" class="theme-btn btn-style-one style-two"><span>Learn
+                                                More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Slide Item -->
+                    <div class="swiper-slide" style="background-image: url(/images/main-slider/image-2.jpg);">
+                
+                        <div class="content-outer">
+                            <div class="content-box">
+                                <div class="inner">
+                                    <h1>Individually Tailored Driving <br> Programs Based On Skills</h1>
+                                    <div class="text">Individually Tailored Driving <br> Programs Based On Skills.
+                                    </div>
+                                    <div class="link-box">
+                                        <a href="http://localhost:3000/" class="theme-btn btn-style-one"><span>Get
+                                                Enrolled</span></a>
+                                        <a href="http://localhost:3000/" class="theme-btn btn-style-one style-two"><span>Learn
+                                                More</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-slider-nav">
+                <div class="banner-slider-control banner-slider-button-prev"><span><i
+                            class="fal fa-arrow-left"></i></span></div>
+                <div class="banner-slider-control banner-slider-button-next"><span><i
+                            class="fal fa-arrow-left"></i></span> </div>
+            </div>
+        </section>
+        <!-- End Bnner Section -->
+
+        <!-- Services section -->
+        <section class="services-section">
+            <div class="auto-container">
+                <div class="row no-gutters">
+                    <div class="service-block-one col-lg-3 col-md-6" data-aos="zoom-in">
+                        <div class="inner-box">
+                            <div class="icon">
+                                <img src="/images/icons/icon-3.png" alt="">
+                                <div class="hover-icon"><img src="/images/icons/icon-3.png" alt=""></div>
+                            </div>
+                            <div class="lower-content">
+                                <h4>RTO Services.<br> </h4>
+                                <div class="text">We provide all types of RTO services. Join Our Class To Know More.
+                                </div>
+                                <div class="read-more-btn">
+                                    <a href="http://localhost:3000/"><img src="/images/icons/icon-13.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-block-one col-lg-3 col-md-6" data-aos="zoom-in">
+                        <div class="inner-box active">
+                            <div class="icon">
+                                <img src="/images/icons/icon-4.png" alt="">
+                                <div class="hover-icon"><img src="/images/icons/icon-4.png" alt=""></div>
+                            </div>
+                            <div class="lower-content">
+                                <h4>Virtual Classroom <br> Training Facility</h4>
+                                <div class="text">Virtual Classroom Training Facility. Join Our Class To Know More.
+                                </div>
+                                <div class="read-more-btn">
+                                    <a href="http://localhost:3000/"><img src="/images/icons/icon-13.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-block-one col-lg-3 col-md-6" data-aos="zoom-in">
+                        <div class="inner-box">
+                            <div class="icon">
+                                <img src="/images/icons/icon-5.png" alt="">
+                                <div class="hover-icon"><img src="/images/icons/icon-5.png" alt=""></div>
+                            </div>
+                            <div class="lower-content">
+                                <h4>Free Informational <br> Videos & Materials</h4>
+                                <div class="text">Free Informational Videos & Materials. Join Our Class To Know More.
+                                </div>
+                                <div class="read-more-btn">
+                                    <a href="http://localhost:3000/"><img src="/images/icons/icon-13.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="service-block-one col-lg-3 col-md-6" data-aos="zoom-in">
+                        <div class="inner-box">
+                            <div class="icon">
+                                <img src="/images/icons/icon-6.png" alt="">
+                                <div class="hover-icon"><img src="/images/icons/icon-6.png" alt=""></div>
+                            </div>
+                            <div class="lower-content">
+                                <h4>Fully Insured, <br> Licensed & Bonded</h4>
+                                <div class="text">Fully Insured, Licensed & Bonded. Join Our Class To Know More.
+                                </div>
+                                <div class="read-more-btn">
+                                    <a href="http://localhost:3000/"><img src="/images/icons/icon-13.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section pt-0" id="about">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image-block">
+                            <div class="image-one"><img src="<%= information[0].image1 %>" alt="" data-aos="zoom-in"></div>
+                            <div class="image-two"><img src="<%= information[0].image2 %>" alt="" data-aos="zoom-in"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-block">
+                            <div class="sec-title mb-20">
+                                <div class="sub-title" data-aos="fade-up">Learn to drive safely</div>
+                                <h2 style="color: rgba(0, 0, 0, 0.814);" data-aos="fade-up"> <%= information[0].header %> </h2>
+                            </div>
+                            <div class="text" data-aos="fade-up">
+                                <%= information[0].paragraph %> </div>
+                            <div class="bottom-content">
+                                <h4 data-aos="fade-up">Offering Special weekend <br>Classes, Book Your’s Today!</h4>
+                                <div class="contact-number">
+                                    <a href="tel:+919371271243" data-aos="fade-up"><i class="fas fa-phone-volume"></i> +91-9371271243</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Driving Courses section -->
+        <section class="driving-courses-section">
+            <div class="sec-bg" style="background-image: url(/images/background/bg-2.jpg);"></div>
+            <div class="auto-container">
+                <div class="top-content row m-0 justify-content-between align-items-center">
+                    <div class="sec-title light">
+                        <div class="sub-title" data-aos="fade-up">instructors help you succeed </div>
+                        <h2 data-aos="fade-up">Our Educational Driving <br> Courses For All Ages</h2>
+                    </div>
+                    <div class="text" data-aos="fade-up">Our school is especially known for its individualistic <br> way to deal with each learner. <br> We maintain an honest business and you as a student or <br> parent can feel safe and secure in all conditions. <br> That’s why our team,
+                        we are the Best <br> professional School In Wardha.
+                    </div>
+                </div>
+                <!--Project Tabs-->
+                <div class="project-tab">
+
+                    <div class="tab-btns-box">
+                        <!--Tabs Header-->
+                        <div class="tabs-header">
+                            <ul class="project-tab-btns clearfix">
+                                <li class="p-tab-btn" data-tab="#p-tab-1" data-aos="fade-up">Driving Lessons For Teens</li>
+                                <li class="p-tab-btn active-btn" data-tab="#p-tab-2" data-aos="fade-up">Driving Lessons For Adults</li>
+                                <li class="p-tab-btn" data-tab="#p-tab-3" data-aos="fade-up">Driving Lessons For Seniors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="outer-box">
+                        <!--Tabs Content-->
+                        <div class="p-tabs-content">
+                            <!--Project Tab / Active Tab-->
+                            <div class="p-tab" id="p-tab-1">
+                                <div class="row row-10">
+                                    <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
+                                        
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-5.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">For International Drivers</a>
+                                                    </h4>
+                                                    
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            <div class="thumb">
+                                                            </div>
+                                                            <h5></h5>
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> $80 - $210</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Project Tab-->
+                            <div class="p-tab active-tab" id="p-tab-2">
+                                <div class="row row-10">
+                                    <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-3.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">Highway Driving Lessons</a></h4>
+                                                    <div class="text">
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            <div class="thumb">
+                                                            </div>
+                                                            <h5></h5>
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-4.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">Automatic Car Lessons</a></h4>
+                                                    <div class="text">
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            <div class="thumb">
+                                                            </div>
+                                                            <h5></h5>
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-5.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">For International Drivers</a>
+                                                    </h4>
+                                                    <div class="text">
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            <div class="thumb">
+                                                            </div>
+                                                            <h5>
+                                                            </h5>
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Project Tab-->
+                            <div class="p-tab" id="p-tab-3">
+                                <div class="row row-10">
+                                    <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "3" }}}'>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-3.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">Highway Driving Lessons</a></h4>
+                                                    <div class="text">
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            
+                                                            
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-4.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">Automatic Car Lessons</a></h4>
+                                                   
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            
+                                                           
+                                                            
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 course-block">
+                                            <div class="inner-box">
+                                                <div class="image"><img src="/images/resource/image-5.jpg" alt="">
+                                                </div>
+                                                <div class="lower-content">
+                                                    <h4><a href="#">For International Drivers</a>
+                                                    </h4>
+                                                    <div class="text">
+                                                    </div>
+                                                    <div class="course-info">
+                                                        <div class="instructor">
+                                                            <div class="thumb">
+                                                            </div>
+                                                            <h5></h5>
+                                                            <div class="designation"></div>
+                                                        </div>
+                                                        <div class="price">
+                                                            <div class="thumb"><img src="/images/resource/image-6.jpg" alt="">
+                                                            </div>
+                                                            <h5>Starts From <br> ₹6000 - ₹8000</h5>
+                                                        </div>
+                                                    </div>
+                                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one style-three"><span>View
+                                                                Course Details</span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature banner section -->
+        <section class="feature-banner-section">
+            <div class="auto-container">
+                <div class="outer-box" style="background-image: url(/images/background/bg-3.jpg);">
+                    <h2 data-aos="fade-up">Mauli Group Helps Clients To Pass Test <br> Earn a License On The First Try</h2>
+                    <h3 data-aos="fade-up">Download <a href="https://play.google.com/store/apps/details?id=com.pavansgroup.rtoexam&hl=en_IN&gl=US">RTO
+                            Exam</a> App before a road test! </h3>
+                </div>
+            </div>
+
+        </section>
+        <section class="call-buton"><a class="cc-calto-action-ripple" href="tel:+919371271243"><i class="fa fa-phone"></i><span class="num"></span>
+        </a>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section" id="team">
+            <div class="auto-container">
+                <div class="sec-title light">
+                    <div class="sub-title" style="color: black;" data-aos="fade-up">Team </div>
+                    <h2 style="color: black;" data-aos="fade-up">Our Team Members. <br> </h2>
+                </div>
+                <div class="row">
+                    <% for (let i=0; i < team.length; i++) { %>
+                        
+                   
+                    <div style="max-width: 100% !important;" class="col-lg-3 team-block">
+                        <div class="inner-box">
+                            <div class="image"><img style="height: 300px;" src="<%=team[i].imageUrl%>" alt="" data-aos="fade-up"></div>
+                            <div class="content">
+                                <h4 data-aos="fade-up"><%= team[i].name %></h4>
+                                <div class="designation" data-aos="fade-up"><%= team[i].role %></div>
+                            </div>
+                            <ul class="social-links">
+                                <li><a href="<%=team[i].socialLinks.facebook%>" class="facebook"><span class="fab fa-facebook-f"></span></a></li>
+                                <li><a href="<%=team[i].socialLinks.googlePlus%>" class="google-plus"><span class="fab fa-google-plus-g"></span></a></li>
+                                <li><a href="<%=team[i].socialLinks.twitter%>" class="twitter"><span class="fab fa-twitter"></span></a></li>
+                                <li><a href="<%=team[i].socialLinks.linkedin%>" class="linkedin-in"><span class="fab fa-pinterest-p"></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <% } %>
+                  
+                 
+                    
+                </div>
+            </div>
+        </section>
+        <!-- team -->
+        <!-- Driving info section -->
+        <section class="driving-info-section">
+            <div class="traffic-cone" data-parallax='{"y": 30}'><img src="/images/resource/image-8.jpg" alt="">
+            </div>
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="image-block">
+                            <div class="image" data-parallax='{"x": 50}'><img src="/images/resource/image-7.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="content-block">
+                            <div class="sec-title mb-20">
+                                <div class="sub-title" data-aos="fade-up">countless benefits of drivega</div>
+                                <h2 data-aos="fade-up">Modern Technologies <br> For Much Easier Driving</h2>
+                            </div>
+                            <div class="text mb-30" data-aos="fade-up">The computer aided simulator lessons help the learner in efficiently operating & synchronizing the driving controls & to master the techniques of SAFE DRIVING. </div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="/images/icons/icon-7.png" alt="" data-aos="fade-up"></div>
+                                <div class="content">
+                                    <h4 data-aos="fade-up">Learn from Experienced Teachers</h4>
+                                    <div class="text" data-aos="fade-up">This course is programmed for beginners in car driving lessons. Theoretical & practical lessons enable the beginner to learn at ease & to develop confidence in safe driving.</div>
+                                </div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="/images/icons/icon-8.png" alt="" data-aos="fade-up"></div>
+                                <div class="content">
+                                    <h4 data-aos="fade-up">Covering All Aspects of Safe Driving</h4>
+                                    <div class="text" data-aos="fade-up">The theoretical lessons comprise of training aids such as Video- Audio presentations & films to enhance better road sense & defensive driving skills.</div>
+                                </div>
+                            </div>
+                            <div class="link-btn"><a href="http://localhost:3000/" class="theme-btn btn-style-one style-three"><span>Join Our Driving Course
+                                    </span></a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- gallery sec start -->
+
+
+
+
+
+
+
+
+
+        <!-- Gallery -->
+        <div class="container" id="gallery">
+            <div class="sec-title light">
+                <div class="sub-title" style="color: black;" data-aos="fade-up">Gallery </div>
+                <h2 style="color: black;" data-aos="fade-up">Our image gallery. <br> </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <img src="<%= gallery[0].image1 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" data-aos="zoom-in" />
+
+                    <img src="<%= gallery[0].image2 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" data-aos="zoom-in" />
+                    <img src="<%= gallery[0].image3 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" data-aos="zoom-in" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="<%= gallery[0].image4 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Mountains in the Clouds" data-aos="zoom-in" />
+
+                    <img src="<%= gallery[0].image5 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Boat on Calm Water" data-aos="zoom-in" />
+                    <img src="<%= gallery[0].image6 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" data-aos="zoom-in" />
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="<%= gallery[0].image7 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Waves at Sea" data-aos="zoom-in" />
+
+                    <img src="<%= gallery[0].image8 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Yosemite National Park" data-aos="zoom-in" />
+                    <img src="<%= gallery[0].image9 %>" class="w-100 shadow-1-strong rounded mb-4" alt="Wintry Mountain Landscape" data-aos="zoom-in" />
+                </div>
+            </div>
+        </div>
+        <!-- Gallery -->
+        <!-- gallery sec end -->
+        <!-- History section -->
+        <section class="history-section">
+            <div class="sec-bg" style="background-image: url(/images/background/bg-2.jpg);"></div>
+            <div class="auto-container">
+                <div class="top-content">
+                    <div class="sec-title text-center light mb-30">
+                        <div class="sub-title" data-aos="fade-up">learning drive is easy with us</div>
+                        <h2 data-aos="fade-up">Mauli Group History</h2>
+                    </div>
+                    <div class="text" data-aos="fade-up" data-aos="fade-up">Mauli Driving School– No.1 Car Teaching School <br> in Wardha, Maharashtra</div>
+                </div>
+                <div class="tab-area">
+                    <!-- Tab panes -->
+                    <div class="tab-content wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1200ms">
+                        <div class="tab-pane fadeInUp animated active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">The reason why our motor school has become the Best Driving School Wardha is providing training, teaching, and road safety guidelines. Learning to drive is not just about getting a license but is an essential skill
+                                            for life. Since 2011 we are delivering great value for our customers.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-two" role="tabpanel" aria-labelledby="tab-two">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-three" role="tabpanel" aria-labelledby="tab-three">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-four" role="tabpanel" aria-labelledby="tab-four">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-five" role="tabpanel" aria-labelledby="tab-five">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-six" role="tabpanel" aria-labelledby="tab-six">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fadeInUp animated" id="tab-seven" role="tabpanel" aria-labelledby="tab-seven">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="image"><img src="/images/resource/image-16.jpg" alt=""></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="content">
+                                        <h4>Year 2011-2012</h4>
+                                        <h3>Most Number Of Students Passed</h3>
+                                        <div class="text">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sitamet consectet ur adipisicing elit sed do eiusmod tempor incididug.</div>
+                                        <ul class="list">
+                                            <li>Driving school approved online booking</li>
+                                            <li>Lessons & courses 7 days a week</li>
+                                            <li>Special weekend classes for busy people</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs tab-btn-style-one" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="tab-one-area" data-toggle="tab" href="http://localhost:3000/#tab-one" role="tab" aria-controls="tab-one" aria-selected="true">
+                                <h4>2011</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-two-area" data-toggle="tab" href="http://localhost:3000/#tab-two" role="tab" aria-controls="tab-two" aria-selected="false">
+                                <h4>2013</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-three-area" data-toggle="tab" href="http://localhost:3000/#tab-three" role="tab" aria-controls="tab-three" aria-selected="false">
+                                <h4>2015</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-four-area" data-toggle="tab" href="http://localhost:3000/#tab-four" role="tab" aria-controls="tab-four" aria-selected="false">
+                                <h4>2017</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-five-area" data-toggle="tab" href="http://localhost:3000/#tab-five" role="tab" aria-controls="tab-five" aria-selected="false">
+                                <h4>2019</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-six-area" data-toggle="tab" href="http://localhost:3000/#tab-six" role="tab" aria-controls="tab-six" aria-selected="false">
+                                <h4>2020</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="tab-seven-area" data-toggle="tab" href="http://localhost:3000/#tab-seven" role="tab" aria-controls="tab-seven" aria-selected="false">
+                                <h4>2022</h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bottom-content">
+                    <div class="text">Book your Free Lesson before a road test NOW!</div>
+                    <div class="link-btn"><a href="http://localhost:3000/" class="theme-btn btn-style-one style-two"><span>View
+                                Course Details</span></a></div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CTA Section -->
+        <section class="cta-section-two" style="background-image: url(/images/background/bg-6.jpg);">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2>Mauli Group Helps Clients To Pass Test & <br> Earn a License On The First Try </h2>
+                        <div class="bottom-content">
+                            <h4>Get your FREE Lesson before a road test!</h4>
+                            <div class="contact-number">
+                                <a href="tel:+919371271243"><i class="fas fa-phone-volume"></i> +91-9371271243</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="image" data-parallax='{"x": 50}'><img src="/images/resource/image-3.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Funfacts Section -->
+        <section class="funfacts-section">
+
+            <div class="auto-container">
+                <div class="row">
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="icon-outer">
+                                <div class="icon"><img src="/images/icons/icon-9.png" alt=""></div>
+                                <div class="hover-icon"><img src="/images/icons/icon-9.png" alt=""></div>
+                            </div>
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="98">0</span><span>%</span>
+                                </div>
+                                <div class="text">Our Driving Test <br> Passing Rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="icon-outer">
+                                <div class="icon"><img src="/images/icons/icon-10.png" alt=""></div>
+                                <div class="hover-icon"><img src="/images/icons/icon-10.png" alt=""></div>
+                            </div>
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="1050">0</span><span>+</span>
+                                </div>
+                                <div class="text">Happy Customers <br> Nationwide</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Column-->
+                    <div class="column counter-column col-lg-4 col-md-6">
+                        <div class="inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <div class="icon-outer">
+                                <div class="icon"><img src="/images/icons/icon-11.png" alt=""></div>
+                                <div class="hover-icon"><img src="/images/icons/icon-11.png" alt=""></div>
+                            </div>
+                            <div class="content">
+                                <div class="count-outer count-box">
+                                    <span class="count-text" data-speed="3000" data-stop="10">0</span><span>Yrs</span>
+                                </div>
+                                <div class="text">Our Instructor’s <br> Teaching Experience</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- Mission Section -->
+        <section class="mission-section" style="background-image: url(/images/background/bg-7.jpg);">
+            <div class="auto-container">
+                <div class="tab-area">
+
+
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <img src="/images/icons/icon-18.png" alt="">
+                                    <div class="hover-icon"><img src="/images/icons/icon-18.png" alt=""></div>
+                                </div>
+                                <div>
+                                    <h5 data-aos="fade-up">A to Z Driving Skills</h5>
+                                    <div class="text" data-aos="fade-up"> Pretium quis quam sed laoret effct <br> liquam volutp lobor quat consequats <br> viveraut lorem tetur diam. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <img src="/images/icons/icon-19.png" alt="">
+                                    <div class="hover-icon"><img src="/images/icons/icon-19.png" alt=""></div>
+                                </div>
+                                <div>
+                                    <h5 data-aos="fade-up">Courses For Everyone</h5>
+                                    <div class="text" data-aos="fade-up"> Pretium quis quam sed laoret effct <br> liquam volutp lobor quat consequats <br> viveraut lorem tetur diam. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <img src="/images/icons/icon-20.png" alt="">
+                                    <div class="hover-icon"><img src="/images/icons/icon-20.png" alt=""></div>
+                                </div>
+                                <div>
+                                    <h5 data-aos="fade-up">Car For Driving Test</h5>
+                                    <div class="text" data-aos="fade-up"> Pretium quis quam sed laoret effct <br> liquam volutp lobor quat consequats <br> viveraut lorem tetur diam. </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-5">
+                            <div class="icon-box">
+                                <div class="icon">
+                                    <img src="/images/icons/icon-21.png" alt="">
+                                    <div class="hover-icon"><img src="/images/icons/icon-21.png" alt=""></div>
+                                </div>
+                                <div>
+                                    <h5 data-aos="fade-up">Informational Videos</h5>
+                                    <div class="text" data-aos="fade-up"> Pretium quis quam sed laoret effct <br> liquam volutp lobor quat consequats <br> viveraut lorem tetur diam. </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!-- testing bg-video -->
+        <!-- Background YouTube Parallax -->
+
+        <!-- testing bg-video -->
+        <!-- Info form section -->
+        <section class="info-form-section" style="background-image: url(/images/background/bg-2.jpg);" id="contact">
+            <div class="signal-image-one" data-parallax='{"x": -30}'><img src="/images/resource/image-1.png" alt=""></div>
+            <div class="signal-image-two" data-parallax='{"x": 30}'><img src="/images/resource/image-2.png" alt=""></div>
+            <div class="auto-container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="content-block">
+                            <div class="sec-title light mb-30">
+                                <div class="sub-title" data-aos="fade-up">enroll in your lessons today</div>
+                                <h2 data-aos="fade-up">Get Appointment With <br> Qualified Instructors</h2>
+                            </div>
+                            <div class="text mb-30" data-aos="fade-up">Nunc quam arcu, pretium quis quam sed, laoreet efficitur aliquam lobortis sem consequat consequat imperdiet. Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididug ut labore et dolore magna
+                                aliqua veniam. </div>
+                            <ul class="list">
+                                <li data-aos="fade-up">Driving school approved online booking</li>
+                                <li data-aos="fade-up">Lessons & courses 7 days a week</li>
+                                <li data-aos="fade-up">Special weekend classes for busy people</li>
+                                <li data-aos="fade-up">Flexibility, Reliability, Patience service</li>
+                                <li data-aos="fade-up">Road Test Preparation with 98% success</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="consult-form">
+                        <h3 data-aos="fade-up">Book Your Lessons, Just Fill-In The Form</h3>
+                        <div class="text" data-aos="fade-up">Nunc quam ar pretium quis lobortis consequat</div>
+                        <form id="appointment-form" action="/form/submit" method="POST">
+                            <div class="row">
+                                <div class="form-group col-md-6" data-aos="fade-up">
+                                    <input placeholder="First Name" type="text" name="first_name" required>
+                                </div>
+                                <div class="form-group col-md-6" data-aos="fade-up">
+                                    <input placeholder="Last Name" type="text" name="last_name" required>
+                                </div>
+                                <div class="form-group col-md-6" data-aos="fade-up">
+                                    <input placeholder="Email" type="email" name="email" required>
+                                </div>
+                                <div class="form-group col-md-6" data-aos="fade-up">
+                                    <input placeholder="Phone" type="text" name="phone" required>
+                                </div>
+                                <div class="form-group col-md-12" data-aos="fade-up">
+                                    <input placeholder="Course You’re Interested In" type="text" name="course" required>
+                                </div>
+                                <div class="form-group col-md-12" data-aos="fade-up">
+                                    <textarea placeholder="Message" name="message" required></textarea>
+                                </div>
+                                <div class="form-group col-md-12" data-aos="fade-up">
+                                    <button type="submit" class="theme-btn btn-style-one"><span>Get Enrolled</span></button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Success Popup -->
+                        <div id="success-popup" class="login-popup">
+                            <div class="popup-content">
+                                <span class="close-btn" onclick="closeSuccessPopup()">&times;</span>
+                                <h3>Form Submitted Successfully</h3>
+                                <p>Thank you for your submission. We will get back to you soon.</p>
+                            </div>
+                        </div>
+
+                        <script>
+                            document.getElementById('appointment-form').addEventListener('submit', function(event) {
+                                event.preventDefault();
+                                let first_name = document.getElementsByName('first_name')[0].value;
+                                let last_name = document.getElementsByName('last_name')[0].value;
+                                let email = document.getElementsByName('email')[0].value;
+                                let phone = document.getElementsByName('phone')[0].value;
+                                let course = document.getElementsByName('course')[0].value;
+                                let message = document.getElementsByName('message')[0].value;
+                                
+                                const formData = {
+                                    first_name,
+                                    last_name,
+                                    email,
+                                    phone,
+                                    course,
+                                    message
+                                }
+
+                              
+
+                                fetch('/form/submit', {
+                                    method: 'POST',
+                                headers: {
+                                'Content-Type': 'application/json'
+                                  },
+                                 body: JSON.stringify(formData)
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    console.log(data)
+                                    
+                                    if (data.success) {
+                                        document.getElementById('success-popup').style.display = 'block';
+                                         document.getElementsByName('first_name')[0].value = "";
+                                document.getElementsByName('last_name')[0].value = "";
+                                document.getElementsByName('email')[0].value = "";
+                                 document.getElementsByName('phone')[0].value = "";
+                                document.getElementsByName('course')[0].value = "";
+                                document.getElementsByName('message')[0].value = "";
+                                    } else {
+                                        alert('Form submission failed. Please try again.');
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                });
+                            });
+
+                            function closeSuccessPopup() {
+                                document.getElementById('success-popup').style.display = 'none';
+                            }
+                        </script>
+
+                        <style>
+                            .login-popup {
+                                display: none;
+                                position: fixed;
+                                z-index: 1000;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                overflow: auto;
+                                background-color: rgba(0, 0, 0, 0.5);
+                            }
+
+                            .popup-content {
+                                background-color: #fff;
+                                margin: 15% auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 300px;
+                                position: relative;
+                            }
+
+                            .close-btn {
+                                position: absolute;
+                                top: 10px;
+                                right: 10px;
+                                color: #aaa;
+                                font-size: 28px;
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+
+                            .close-btn:hover,
+                            .close-btn:focus {
+                                color: #000;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        </style>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Working Process section -->
+        <section class="working-process-section">
+            <div class="background-icon"><img src="/images/icons/icon-12.png" alt=""></div>
+            <div class="auto-container">
+                <div class="top-content">
+                    <div class="sec-title text-center mb-30">
+                        <div class="sub-title" data-aos="fade-up">learning drive is easy with us</div>
+                        <h2 data-aos="fade-up">How Mauli Group Works</h2>
+                    </div>
+                    <div class="text text-center" data-aos="fade-up">AT MAULI DRIVING SCHOOL WE PROMISE TO MAINTAIN THE BEST PRACTICES <br> AND IMPART DRIVING KNOWLEDGE IN THE BEST WAY POSSIBLE. </div>
+                </div>
+                <div class="wrapper-box">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 process-block">
+                            <div class="inner-box">
+                                <div class="count" data-aos="fade-up">01</div>
+                                <div class="content">
+                                    <div>
+                                        <h4 data-aos="fade-up">Choose a Course <br> With Right Package</h4>
+                                        <div class="text" data-aos="fade-up">Nunc quam ar pretium quis <br> lobortis sel consequat conse
+                                            <br> tetur diam nuc bibend.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 process-block active">
+                            <div class="inner-box">
+                                <div class="count" data-aos="fade-up">02</div>
+                                <div class="content">
+                                    <div>
+                                        <h4 data-aos="fade-up">Start Your Course <br> With Our Instructors</h4>
+                                        <div class="text" data-aos="fade-up">Nunc quam ar pretium quis <br> lobortis sel consequat conse
+                                            <br> tetur diam nuc bibend.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 process-block">
+                            <div class="inner-box">
+                                <div class="count" data-aos="fade-up">03</div>
+                                <div class="content">
+                                    <div>
+                                        <h4 data-aos="fade-up">Pass Your Road <br> Test & Get License</h4>
+                                        <div class="text" data-aos="fade-up">Nunc quam ar pretium quis <br> lobortis sel consequat conse
+                                            <br> tetur diam nuc bibend.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA section -->
+        <section class="cta-section" style="background-image: url(/images/background/bg-4.jpg);">
+            <div class="auto-container">
+                <h5 data-aos="fade-up">How WE MAKE A DIFFERENCE</h5>
+                <h2 data-aos="fade-up">We Give Best Guidence To Each Student, <br> That’s Why We Produce Confident & Safe Drivers </h2>
+                <div class="link-box">
+                    <a href="http://localhost:3000/" class="theme-btn btn-style-one"><span>Get Enrolled</span></a>
+                    <a href="http://localhost:3000/" class="theme-btn btn-style-one style-two"><span>Learn More</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials section -->
+        <section class="testimonials-section">
+            <div class="sec-bg" style="background-image: url(/images/background/bg-5.jpg);"></div>
+            <div class="auto-container">
+                <div class="top-content">
+                    <div class="sec-title text-center mb-30">
+                        <div class="sub-title" data-aos="fade-up">What our clients are saying</div>
+                        <h2 data-aos="fade-up">Customer Testimonials</h2>
+                    </div>
+                    <div class="text" data-aos="fade-up">Aute irure dolor reprehenderit cepteur sint ocaecat cupidatate <br> sed ipsum non proident int sunt indys culpa quis. </div>
+                </div>
+                <div class="row">
+                    <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": false, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "1" } , "992":{ "items" : "1" }, "1200":{ "items" : "2" }}}'>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-2.jpg" alt=""></div>
+                                    <h4>James Thomas</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-3.jpg" alt=""></div>
+                                    <h4>Tanya Benson</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-2.jpg" alt=""></div>
+                                    <h4>James Thomas</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-3.jpg" alt=""></div>
+                                    <h4>Tanya Benson</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-2.jpg" alt=""></div>
+                                    <h4>James Thomas</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 testimonial-block">
+                            <div class="inner-box">
+                                <div class="author-info">
+                                    <div class="thumb"><img src="/images/resource/author-3.jpg" alt=""></div>
+                                    <h4>Tanya Benson</h4>
+                                    <div class="location">California, USA</div>
+                                </div>
+                                <div class="content">
+                                    <div class="rating-info">
+                                        <h5>Earned Driving License</h5>
+                                        <div class="rating">
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                            <span class="fas fa-star"></span>
+                                        </div>
+                                    </div>
+                                    <div class="text">Dolor sitam consectetur sed adipisicing <br> eiusmod tempor cididunt laboret dolors <br> magn aliquat enim sed minim veniam eu <br> nostrud lorem ipsum dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="brand-logo">
+                    <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "center": false, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "3" } , "992":{ "items" : "3" }, "1200":{ "items" : "4" }}}'>
+                        <div class="single-logo"><img src="/images/resource/client-logo-1.jpg" alt=""></div>
+                        <div class="single-logo"><img src="/images/resource/client-logo-2.jpg" alt=""></div>
+                        <div class="single-logo"><img src="/images/resource/client-logo-3.jpg" alt=""></div>
+                        <div class="single-logo"><img src="/images/resource/client-logo-4.jpg" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- map -->
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3731.3138654455033!2d78.59059661412945!3d20.73806890301604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd47f14ee9792fb%3A0x2dea0f6c16c36871!2sMauli%20Motor%20Driving%20School!5e0!3m2!1sen!2sin!4v1645610139257!5m2!1sen!2sin"
+                width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+        <!-- map -->
+
+        <footer class="main-footer" style="background-image: url(/images/background/bg-1.jpg);">
+            <div class="auto-container">
+                <!--Widgets Section-->
+                <div class="widgets-section">
+                    <div class="row clearfix">
+
+                        <!--Column-->
+                        <div class="column col-lg-3 col-md-6">
+                            <div class="widget about-widget">
+                                <div class="logo">
+                                    <a href="http://localhost:3000/"><img src="/images/logo-2.png" alt=""></a>
+                                </div>
+                                <div class="text">WITH THS PROMISE WE MAKE SURE THAT ALL OUR FACILITIES ARE WORLD CLASS AND THE DRIVING COURSE YOU ENROLL WITH US WILL BE ENJOYABLE.</div>
+                                <ul class="social-links">
+                                    <li><a href="http://localhost:3000/"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="http://localhost:3000/"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="http://localhost:3000/"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="http://localhost:3000/"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="http://localhost:3000/"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-lg-3 col-md-6">
+                            <div class="widget newsletter-widget">
+                                <h3 class="widget-title">Newsletter Signup</h3>
+                                <div class="widget-content">
+                                    <div class="text">Enter your email address to get latest <br> updates and offers from us.</div>
+                                    <div class="newsletter-form">
+                                        <form class="ajax-sub-form" method="post">
+                                            <div class="form-group">
+                                                <input type="email" placeholder="Email Address..." id="subscription-email">
+                                                <button type="submit" class="theme-btn"><i
+                                                        class="fad fa-paper-plane"></i><span></span></button>
+                                                <label class="subscription-label" for="subscription-email"></label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-lg-3 col-md-6">
+                            <div class="widget links-widget">
+                                <h3 class="widget-title">Our Courses</h3>
+                                <div class="widget-content">
+                                    <ul>
+                                        <li><a href="http://localhost:3000/">Learn To Drive Slowly</a></li>
+                                        <li><a href="http://localhost:3000/">Courses For Adults</a></li>
+                                        <li><a href="http://localhost:3000/">Lessons For Teens</a></li>
+                                        <li><a href="http://localhost:3000/">Highway Driving Course</a></li>
+                                        <li><a href="http://localhost:3000/">For International Drivers</a></li>
+                                        <li><a href="http://localhost:3000/">Automatic Car Lessons</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Column-->
+                        <div class="column col-lg-3 col-md-6">
+                            <div class="widget contact-widget">
+                                <h3 class="widget-title">Contact Us</h3>
+                                <div class="widget-content">
+                                    <ul class="contact-info">
+                                        <li>
+                                            <div class="icon"><span class="fas fa-flag"></span></div>
+                                            <div class="text">Krishan Nagar, Wardha(442001) <br> Maharashtra</div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><span class="fas fa-phone-volume"></span></div>
+                                            <div class="text">
+                                                Helpline 24/7 <br>
+                                                <a href="tel:+91-9371271243">+91-9371271243</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="icon"><span class="fas fa-clock"></span></div>
+                                            <div class="text">
+                                                Mon to Friday <br> 7:30 am to 7:00 pm
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="auto-container">
+                    <div class="wrapper-box">
+                        <div class="copyright">
+                            <div class="text">(c) 2022 Mauli Group - Driving School. All rights reserved.</div>
+                        </div>
+                        <div class="footer-menu">
+                            <ul>
+                                <li><a href="https://cosmosdigitalservices.in/">Design by Cosmos Digital </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        </div>
+        <!--End pagewrapper-->
+
+        <!--Scroll to top-->
+        <!-- <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fal fa-arrow-from-bottom"></span></div> -->
+        <div class="scroll-to-top scroll-to-target" data-target="html"> <i class="fad fa-angle-double-right" style="font-size: x-large !important;"></i></div>
+
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap-select.min.js"></script>
+        <script src="/js/jquery.fancybox.js"></script>
+        <script src="/js/isotope.js"></script>
+        <script src="/js/owl.js"></script>
+        <script src="/js/appear.js"></script>
+        <script src="/js/wow.js"></script>
+        <script src="/js/lazyload.js"></script>
+        <script src="/js/scrollbar.js"></script>
+        <script src="/js/TweenMax.min.js"></script>
+        <script src="/js/swiper.min.js"></script>
+        <script src="/js/jquery.polyglot.language.switcher.js"></script>
+        <script src="/js/jquery.ajaxchimp.min.js"></script>
+        <script src="/js/parallax-scroll.js"></script>
+
+        <script src="/js/script.js"></script>
+        <!-- new -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <script src="charming-pro/dist/js/charming-pro.min.js"></script>
+        <!-- bg-video script -->
+       
+
+</html>

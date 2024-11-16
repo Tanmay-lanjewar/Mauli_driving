@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Stylesheets -->
+      <link href="/css/bootstrap.css" rel="stylesheet">
+      <link href="/css/style.css" rel="stylesheet">
+    
+</head>
+<body>
+    <%- include('sidebar.ejs') %>
+    <div class="content">
+            <!-- About Section -->
+            <section class="about-section pt-0" id="about">
+                <div class="auto-container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="image-block">
+                                <div class="image-one"><img src="<%= data.image1 %>" alt="" data-aos="zoom-in"></div>
+                                <div class="image-two"><img src="<%= data.image2 %>" alt="" data-aos="zoom-in"></div>
+                            </div>
+                            <div style="margin-bottom: 40px;" class="edit-button" style="margin-top: 20px;">
+                                <button class="btn btn-primary" onclick="editContent()" data-aos="fade-up">
+                                    <i class="fas fa-edit"></i> Edit Images
+                                </button>
+                            </div>
+                            <script>
+                                function editContent() {
+                                    // Show the popup form
+                                    document.getElementById('editForm').style.display = 'block';
+                                }
+
+                                function closeForm() {
+                                    // Hide the popup form
+                                    document.getElementById('editForm').style.display = 'none';
+                                }
+                            </script>
+
+                            <!-- Popup Form -->
+                            <div id="editForm" class="popup-form" style="display:none;">
+                                <div class="form-container">
+                                    <h2>Upload new images</h2>
+                                    <form action="/information/images" method="post" enctype="multipart/form-data">
+                                        <label for="image1">Upload First Image</label>
+                                        <input type="file" id="image1" name="image1" placeholder="Upload Image">
+
+                                        <label for="image2">Upload Second Image</label>
+                                        <input type="file" id="image2" name="image2" placeholder="Upload Image">
+
+                                        <input type="submit" onclick="closeForm()" class="btn btn-primary" value="Save">
+
+                                        
+                                        <button type="button" class="btn btn-secondary" onclick="closeForm()">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                           
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="content-block">
+                                <div class="sec-title mb-20">
+                                    <div class="sub-title" data-aos="fade-up">Learn to drive safely</div>
+                                    <h2 data-aos="fade-up">
+                                        <%= data.header%>
+                                    </h2>
+                                </div>
+                                <div class="text" data-aos="fade-up">
+                                    <%= data.paragraph%>
+                                </div>
+                                    <div class="edit-button" style="margin-top: 20px;">
+                                        <button class="btn btn-primary" onclick="edit_text_Content()" data-aos="fade-up">
+                                            <i class="fas fa-edit"></i> Edit Content
+                                        </button>
+                                    </div>   
+                            </div>
+                            <!-- Popup Form for Editing Text -->
+                            <div id="editTextForm" class="popup-form" style="display:none;">
+                                <div class="form-container">
+                                    <h2>Edit Content</h2>
+                                    <form action="/information/text" method="post">
+                                        <label for="header">Edit Header</label>
+                                        <input style="height: 50px;" type="text" id="header" name="header" value="<%= data.header %>" placeholder="Edit Header">
+
+                                        <label for="paragraph">Edit Paragraph</label>
+                                        <textarea rows="6" id="paragraph" name="paragraph" placeholder="Edit Paragraph"><%= data.paragraph %></textarea>
+
+                                        <input type="submit" onclick="closeTextForm()" class="btn btn-primary" value="Save">
+
+                                        <button type="button" class="btn btn-secondary" onclick="closeTextForm()">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <script>
+                                function edit_text_Content() {
+                                    // Show the popup form
+                                    document.getElementById('editTextForm').style.display = 'block';
+                                }
+
+                                function closeTextForm() {
+                                    // Hide the popup form
+                                    document.getElementById('editTextForm').style.display = 'none';
+                                }
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+    
+    </div>
+    <script>
+        
+        if( error =="YES"){
+            alert("Error in uploading images")
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <!-- Stylesheets -->
+      <link href="/css/bootstrap.css" rel="stylesheet">
+      <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <%- include('sidebar.ejs') %>
+    <div class="content">
+         <!-- Gallery -->
+         <div class="container" id="gallery">
+            <div class="sec-title light">
+                <div class="sub-title" style="color: black;" data-aos="fade-up">Gallery </div>
+                <h2 style="color: black;" data-aos="fade-up">Our image gallery. <br> </h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                    <div style="position: relative;">
+                    <img src="/<%=data[0].image1%>" class="w-100 shadow-1-strong rounded mb-4" alt="image1" data-aos="zoom-in" />
+                    <button class="image_button" onclick="openForm()">Change Picture</button>
+
+                    <div id="popupForm" style="display:none;">
+                        <form onsubmit="changePicture(1)" action="/gallery/1?_method=PUT" method="post" enctype="multipart/form-data">
+                            <label for="imageFile">Choose Image:</label>
+                            <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                            <input type="submit" value="Submit">
+                            <button type="button" onclick="closeForm()">Close</button>
+                        </form>
+                    </div>
+                    </div>
+
+                    <div style="position: relative;">
+                        <img src="/<%=data[0].image2 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image2" data-aos="zoom-in" />
+                        <button class="image_button" onclick="openForm1()">Change Picture</button>
+    
+                        <div class="popupForm" id="popupForm1" style="display:none;">
+                            <form onsubmit="changePicture(2)" action="/gallery/2?_method=PUT" method="post" enctype="multipart/form-data">
+                                <label for="imageFile">Choose Image:</label>
+                                <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                <input type="submit" value="Submit">
+                                <button type="button" onclick="closeForm1()">Close</button>
+                            </form>
+                        </div>
+                        <script>
+
+                            function openForm1() {
+                                document.getElementById('popupForm1').style.display = 'block';
+                            }
+                            function closeForm1() {
+                                document.getElementById('popupForm1').style.display = 'none';
+                            }
+                            
+                        </script>
+                        </div>
+
+                    <div style="position: relative;">
+                            <img src="/<%= data[0].image3 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image3" data-aos="zoom-in" />
+                            <button class="image_button" onclick="openForm2()">Change Picture</button>
+        
+                            <div class="popupForm" id="popupForm2" style="display:none;">
+                                <form onsubmit="changePicture(3)" action="/gallery/3?_method=PUT" method="post" enctype="multipart/form-data" >
+                                    <label for="imageFile">Choose Image:</label>
+                                    <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                    <input type="submit" value="Submit">
+                                    <button type="button" onclick="closeForm2()">Close</button>
+                                </form>
+                            </div>
+                            <script>
+    
+                                function openForm2() {
+                                    document.getElementById('popupForm2').style.display = 'block';
+                                }
+                                function closeForm2() {
+                                    document.getElementById('popupForm2').style.display = 'none';
+                                }
+                                </script>
+                            </div>
+                  
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+
+                    <div style="position: relative;">
+                        <img src="/<%= data[0].image4 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image4" data-aos="zoom-in" />
+                        <button class="image_button" onclick="openForm3()">Change Picture</button>
+                        <div class="popupForm" id="popupForm3" style="display:none;">
+                            <form onsubmit="changePicture(4)" action="/gallery/4?_method=PUT" method="post" enctype="multipart/form-data">
+                                <label for="imageFile">Choose Image:</label>
+                                <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                <input type="submit" value="Submit">
+                                
+                                <button type="button" onclick="closeForm3()">Close</button>
+                            </form>
+                        </div>
+                        <script>
+
+                            function openForm3() {
+                                document.getElementById('popupForm3').style.display = 'block';
+                            }
+                            function closeForm3() {
+                                document.getElementById('popupForm3').style.display = 'none';
+                            }
+                            </script>
+                        </div>
+
+
+                    <div style="position: relative;">
+                            <img src="/<%= data[0].image5 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image5" data-aos="zoom-in" />
+                            <button class="image_button" onclick="openForm4()">Change Picture</button>
+                            <div class="popupForm" id="popupForm4" style="display:none;">
+                                <form onsubmit="changePicture(5)" action="/gallery/5?_method=PUT" method="post" enctype="multipart/form-data">
+                                    <label for="imageFile">Choose Image:</label>
+                                    <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+
+                                    <input type="submit" value="Submit">
+                                
+                                    <button type="button" onclick="closeForm4()">Close</button>
+                                </form>
+                            </div>
+                            <script>
+    
+                                function openForm4() {
+                                    document.getElementById('popupForm4').style.display = 'block';
+                                }
+                                function closeForm4() {
+                                    document.getElementById('popupForm4').style.display = 'none';
+                                }
+                                </script>
+                            </div>
+
+                            <div style="position: relative;">
+                                <img src="/<%= data[0].image6 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image6" data-aos="zoom-in" />
+                                <button class="image_button" onclick="openForm5()">Change Picture</button>
+                                <div class="popupForm" id="popupForm5" style="display:none;">
+                                    <form onsubmit="closeForm5()" action="/gallery/6?_method=PUT" method="post" enctype="multipart/form-data">
+                                        <label for="imageFile">Choose Image:</label>
+                                        <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                        <input type="submit" value="Submit">
+                                        <button type="button" >Close</button>
+                                    </form>
+                                </div>
+                                <script>
+        
+                                    function openForm5() {
+                                        document.getElementById('popupForm5').style.display = 'block';
+                                    }
+                                    function closeForm5() {
+                                        document.getElementById('popupForm5').style.display = 'none';
+                                    }
+                                    </script>
+                                </div>
+                   
+                </div>
+
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    
+
+                    <div style="position: relative;">
+                        <img src="/<%= data[0].image7 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image7" data-aos="zoom-in" />
+                        <button class="image_button" onclick="openForm6()">Change Picture</button>
+                        <div class="popupForm" id="popupForm6" style="display:none;">
+                            <form onsubmit="changePicture(7)" action="/gallery/7?_method=PUT" method="post" enctype="multipart/form-data">
+                                <label for="imageFile">Choose Image:</label>
+                                <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                <input type="submit" value="Submit">
+                                <button type="button" onclick="closeForm6()">Close</button>
+                            </form>
+                        </div>
+                        <script>
+
+                            function openForm6() {
+                                document.getElementById('popupForm6').style.display = 'block';
+                            }
+                            function closeForm6() {
+                                document.getElementById('popupForm6').style.display = 'none';
+                            }
+                            </script>
+                        </div>
+
+                    <div style="position: relative;">
+                        <img src="/<%= data[0].image8 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image8" data-aos="zoom-in" />
+                            <button class="image_button" onclick="openForm7()">Change Picture</button>
+                            <div class="popupForm" id="popupForm7" style="display:none;">
+                                <form onsubmit="changePicture(8)" action="/gallery/8?_method=PUT" method="post" enctype="multipart/form-data">
+                                    <label for="imageFile">Choose Image:</label>
+                                    <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                    <input type="submit" value="Submit">
+                                    <button type="button" onclick="closeForm7()">Close</button>
+                                </form>
+                            </div>
+                            <script>
+    
+                                function openForm7() {
+                                    document.getElementById('popupForm7').style.display = 'block';
+                                }
+                                function closeForm7() {
+                                    document.getElementById('popupForm7').style.display = 'none';
+                                }
+                                </script>
+                            </div>
+
+                    <div style="position: relative;">
+                        <img src="/<%= data[0].image9 %>" class="w-100 shadow-1-strong rounded mb-4" alt="image9" data-aos="zoom-in" />
+                                <button class="image_button" onclick="openForm8()">Change Picture</button>
+                                <div class="popupForm" id="popupForm8" style="display:none;">
+                                    <form onsubmit="changePicture(9)" action="/gallery/9?_method=PUT" method="post" enctype="multipart/form-data">
+                                        <label for="imageFile">Choose Image:</label>
+                                        <input required type="file" id="imageFile" name="imageFile" accept="image/*">
+                                        <input type="submit" value="Submit">
+                                        <button type="button" onclick="closeForm8()">Close</button>
+                                    </form>
+                                </div>
+                                <script>
+        
+                                    function openForm8() {
+                                        document.getElementById('popupForm8').style.display = 'block';
+                                    }
+                                    function closeForm8() {
+                                        document.getElementById('popupForm8').style.display = 'none';
+                                    }
+                                    </script>
+                                </div>
+
+                   
+                    
+                  
+                </div>
+            </div>
+        </div>
+        <script>
+
+            function changePicture(imageNumber) {
+               
+
+
+
+                if(imageNumber==1){
+                    closeForm();
+                }
+                else if(imageNumber==2){
+                    closeForm1();
+                }
+                else if(imageNumber==3){
+                    closeForm2();
+                }
+                else if(imageNumber==4){
+                    closeForm3();
+                }
+                else if(imageNumber==5){
+                    closeForm4();
+                }
+                else if(imageNumber==6){
+                    closeForm5();
+                }
+                else if(imageNumber==7){
+                    closeForm6();
+                }
+                else if(imageNumber==8){
+                    closeForm7();
+                }
+                else if(imageNumber==9){
+                    closeForm8();
+                }
+            }
+
+            function openForm() {
+                document.getElementById('popupForm').style.display = 'block';
+            }
+            function closeForm() {
+                document.getElementById('popupForm').style.display = 'none';
+            }
+          
+
+            
+        </script>
+        <style>
+            .image_button{
+                position: absolute;
+                right: 30%;
+                bottom: 20%;
+            }
+
+            input[type="submit"] {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+            button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+            button:hover{
+                background-color: #4caf4f7c; /
+            }
+
+            #popupForm {
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            #popupForm form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            #popupForm label, #popupForm input, #popupForm button {
+                margin-bottom: 10px;
+            }
+
+            .popupForm {
+                background-color: white;
+                border: 1px solid #ccc;
+                padding: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+            }
+
+            .popupForm form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .popupForm label, .popupForm input, .popupForm button {
+                margin-bottom: 10px;
+            }
+        </style>
+    </div>
+</body>
+</html>

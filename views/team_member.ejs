@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/team_member">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Stylesheets -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/admin_dashboard.css">
+    <link rel="stylesheet" href="/css/team_member.css">
+</head>
+
+<body>
+    <%- include('sidebar') %>
+
+        <div class="content">
+
+
+            <section class="team-section" id="team">
+                <div class="auto-container">
+                    <div class="sec-title light">
+                        <div class="sub-title" style="color: black;" data-aos="fade-up">Team </div>
+                        <h2 style="color: black;" data-aos="fade-up">Our Team Members. <br> </h2>
+                    </div>
+                    <div class="row">
+
+                        <% for (let i=0; i < data.length; i++) { %>
+                            <div class="col-lg-3 team-block">
+                                <div class="inner-box">
+                                    <div class="delete-icon"
+                                        style="position: absolute; top: 0px; right: 10px; cursor: pointer;"
+                                        onclick="edit_delete('<%=data[i]._id%>','<%=data[i].name%>')">
+                                        <i class="fa-solid fa-trash"></i>
+                                    </div>
+                                    <div class="edit-icon"
+                                        onclick="edit_Content_Form('<%=data[i]._id%>')">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </div>
+                                    
+                                    <script>
+                                        function edit_delete(id) {
+                                            // Show the popup form
+                                            let member_id = document.getElementById("mem_id");
+                                            member_id.innerText=id;
+
+                                            let member_name = document.getElementById("member_header");
+                                            member_name.innerText=name;
+
+                                            let id_input = document.getElementById("delete_id_input");
+                                            id_input.value=id;
+                                            document.getElementById('edit_delete_Form').style.display = 'block';
+                                        }
+        
+                                        function close_delte() {
+                                            // Hide the popup form
+                                            document.getElementById('edit_delete_Form').style.display = 'none';
+                                        }
+
+                                        function edit_Content_Form(id){
+                                             // Show the popup form
+
+                                             fetch(`/teammember/${id}`)
+        .then(response => response.json())
+        .then(data => {
+            
+            // Populate the form fields with the fetched data
+            document.getElementById('name').value = data.name;
+            document.getElementById('role').value = data.role;
+            document.getElementById('edit_id').value = data._id;
+            document.getElementById('facebook').value = data.socialLinks.facebook;
+            document.getElementById('googlePlus').value = data.socialLinks.googlePlus;
+            document.getElementById('twitter').value = data.socialLinks.twitter;
+            document.getElementById('linkedin').value = data.socialLinks.linkedin;
+            document.getElementById('image1').value=data.imageUrl;
+
+            // Add more fields if needed and handle image upload as required
+        })
+        .catch(err => console.error('Error fetching data:', err));
+                                                
+                                            
+                       
+                                            document.getElementById('edit_content_Form').style.display = 'block';
+                                        }
+
+                                        function close_edit_Content_Form() {
+                                            
+                                            // Hide the popup form
+                                            document.getElementById('edit_content_Form').style.display = 'none';
+                                        }
+                   
+                                    </script>
+
+                                    <!--EDIT Popup Form -->
+                                   <div id="edit_content_Form" class="popup-form" style="display:none; z-index:100000000000000000000000000000000000000000000000000000000000000000000000000000">
+                                    <div class="form-container">
+                                        <h2>Edit Content</h2>
+                                        <form action="/team/edit?_method=PUT" method="post"
+                                        onsubmit="close_edit_Content_Form()"
+                                            enctype="multipart/form-data">
+                                           
+                                            <label for="image1">
+                                                Upload Image
+                                            </label>
+                                            <input  type="file" id="image1" name="imageUrl"
+                                                placeholder="Upload Image">
+
+                                            
+
+                                            <label for="name">
+                                                Name
+                                            </label>
+                                            <input required style="border: 1px solid black;" placeholder="Enter Name" id="name" name="name" />
+
+                                            
+                                            <input style="display: none;" required style="border: 1px solid black;"  id="edit_id" name="edit_id" />
+
+                                            <label for="role"> Role
+                                            </label>
+                                            <input required style="border: 1px solid black;" placeholder="Enter Role" id="role" name="role" />
+
+                                            <label for="Facebook"> Facebook
+                                            </label>
+                                            <input type="url" required style="border: 1px solid black;" placeholder="Facebook Url" id="facebook" name="facebook" />
+
+                                            <label for="googlePlus"> GooglePlus
+                                            </label>
+                                            <input type="url" required style="border: 1px solid black;" placeholder="googlePlus Url" id="googlePlus"
+                                                name="googlePlus" />
+
+                                            <label for="twitter"> Twitter
+                                            </label>
+                                            <input type="url" required style="border: 1px solid black;" placeholder="twitter Url" id="twitter" name="twitter" />
+
+                                            <label for="linkedin"> Linkedin
+                                            </label>
+                                            <input type="url" required style="border: 1px solid black;" placeholder="linkedin Url" id="linkedin" name="linkedin" />
+
+
+
+                                            <input type="submit"  class="btn btn-primary"
+                                                value="Save">
+
+
+                                            <button type="button" class="btn btn-secondary"
+                                                onclick="close_edit_Content_Form()">
+                                                Cancel
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+
+
+                                    <!-- Popup Form -->
+                                    <div id="edit_delete_Form" class="popup-form" style="display:none;">
+                                        <div class="form-container">
+                                            <h2>Delete Member</h2>
+                                            <form action="/team/delete?_method=DELETE" method="POST">
+                                                <label style="color: rgba(0, 0, 0, 0.608);" for="member_header">Name</label>
+                                                <h4  style="display: inline; border: none; text-decoration: underline;" id="member_header"></h4><br/>
+                                                <label style="color: rgba(0, 0, 0, 0.608);" for="mem_id">Id</label>
+                                                <h4  style="display: inline; border: none; text-decoration: underline;" id="mem_id"></h4>
+                                                <input type="hidden" name="id" id="delete_id_input">
+
+                                                <input type="submit" onclick="close_delte()" class="btn btn-primary" value="Delete">
+                                                <button type="button" class="btn btn-secondary" onclick="close_delte()">Cancel</button>
+                                            </form>
+                                        </div>
+                                    </div>
+        
+                                    <style>
+                                        .popup-form {
+                                            position: fixed;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%, -50%);
+                                            background-color: white;
+                                            padding: 20px;
+                                            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                                            z-index: 1000;
+                                        }
+        
+                                        .form-container {
+                                            display: flex;
+                                            flex-direction: column;
+                                        }
+        
+                                        .form-container input, .form-container textarea {
+                                            margin-bottom: 10px;
+                                            padding: 10px;
+                                            width: 100%;
+                                            box-sizing: border-box;
+                                        }
+        
+                                        .form-container button {
+                                            margin-top: 10px;
+                                        }
+                                        #edit_text_Form  textarea{
+                                            border: 1px solid black;
+                                        }
+                                    </style>
+                                    
+                                    <div class="image"><img style="height: 300px;" src="<%= data[i].imageUrl %>" alt="" data-aos="fade-up">
+                                    </div>
+                                    <div class="card_content">
+                                        <h4 data-aos="fade-up">
+                                            <%= data[i].name %>
+                                        </h4>
+                                        <div class="designation" data-aos="fade-up">
+                                            <%= data[i].role %>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <% } %>
+
+
+                                <div class="col-lg-3">
+                                    <div class="icon-box">
+                                        <div class="icon"><img style="height: 250px; border-radius: 20px;"
+                                                src="/images/profile.webp" alt="" data-aos="fade-up"></div>
+                                        <div class="card_content">
+                                            <h4 style="color: black;">Add New Member</h4>
+                                            <button onclick="editContent()" id="addMemberBtn" class="btn btn-primary"
+                                                data-toggle="modal" data-target="#addMemberModal">Add </button>
+                                        </div>
+                                        <script>
+                                            function editContent() {
+                                                // Show the popup form
+                                                document.getElementById('editForm').style.display = 'block';
+                                            }
+
+                                            function closeForm() {
+                                                // Hide the popup form
+                                                document.getElementById('editForm').style.display = 'none';
+                                            }
+                                        </script>
+
+                                        <!-- Popup Form -->
+                                        <div style="display: none;" id="editForm" class="popup-form" >
+                                            <div class="form-container">
+                                                <h2>Add New Member</h2>
+                                                <form action="/team/add" method="post"
+                                                onsubmit="closeForm()"
+                                                    enctype="multipart/form-data">
+                                                    <label for="image1">
+                                                        Upload Image
+                                                    </label>
+                                                    <input required type="file" id="image1" name="imageUrl"
+                                                        placeholder="Upload Image">
+
+                                                    <label for="name">
+                                                        Name
+                                                    </label>
+                                                    <input required style="border: 1px solid black;" placeholder="Enter Name" id="name" name="name" />
+
+                                                    <label for="role"> Role
+                                                    </label>
+                                                    <input required style="border: 1px solid black;" placeholder="Enter Role" id="role" name="role" />
+
+                                                    <label for="Facebook"> Facebook
+                                                    </label>
+                                                    <input type="url" required style="border: 1px solid black;" placeholder="Facebook Url" id="facebook" name="facebook" />
+
+                                                    <label for="googlePlus"> GooglePlus
+                                                    </label>
+                                                    <input type="url" required style="border: 1px solid black;" placeholder="googlePlus Url" id="googlePlus"
+                                                        name="googlePlus" />
+
+                                                    <label for="twitter"> Twitter
+                                                    </label>
+                                                    <input type="url" required style="border: 1px solid black;" placeholder="twitter Url" id="twitter" name="twitter" />
+
+                                                    <label for="linkedin"> Linkedin
+                                                    </label>
+                                                    <input type="url" required style="border: 1px solid black;" placeholder="linkedin Url" id="linkedin" name="linkedin" />
+
+
+
+                                                    <input type="submit"  class="btn btn-primary"
+                                                        value="Save">
+
+
+                                                    <button type="button" class="btn btn-secondary"
+                                                        onclick="closeForm()">
+                                                        Cancel
+                                                    </button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .popup-form {
+                                                position: fixed;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                background-color: white;
+                                                padding: 20px;
+                                                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                                z-index: 1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+                                            }
+
+                                            .form-container {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+
+                                            .form-container input,
+                                            .form-container textarea {
+                                                margin-bottom: 10px;
+                                                padding: 10px;
+                                                width: 100%;
+                                                box-sizing: border-box;
+                                            }
+
+                                            .form-container label {
+                                                font-weight: bold;
+                                                font-size: larger;
+                                            }
+
+                                            .form-container button {
+                                                margin-top: 10px;
+                                            }
+
+                                            #header,
+                                            #paragraph {
+                                                border: 1px solid rgba(0, 0, 0, 0.351);
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+
+                    </div>
+
+
+</body>
+
+</html>
